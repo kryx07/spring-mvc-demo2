@@ -9,14 +9,11 @@
 </head>
 <body>
 
-<form action="/processForm" method="get">
+Hello World of Spring
 
-    <input type="text" name="studentName"
-           placeholder="What's your name?"/>
-    <input type="submit"/>
-</form>
+<br><br>
 
+Student name : ${param.studentName}
 
 </body>
-</html>>
-
+</html>
