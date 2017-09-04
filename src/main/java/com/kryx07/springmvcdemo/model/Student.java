@@ -13,6 +13,7 @@ public class Student {
     @Value("#{countryOptions}")
     private LinkedHashMap<String, String> countryOptions;
     private String favouriteLanguage;
+    private String[] operatingSystem;
 
     public Student() {
         countryOptions = new LinkedHashMap<>();
@@ -60,5 +61,13 @@ public class Student {
 
     public String getFavouriteLanguage() {
         return favouriteLanguage;
+    }
+
+    public String[] getOperatingSystem() {
+        return operatingSystem;
+    }
+
+    public void setOperatingSystem(String[] operatingSystem) {
+        this.operatingSystem = operatingSystem;
     }
 }

@@ -52,6 +52,14 @@
     C# <form:radiobutton path="favouriteLanguage" value="C#"/>
     C++ <form:radiobutton path="favouriteLanguage" value="C++"/>
 
+    <br><br>
+
+    Operating Systems:
+
+    Linux <form:checkbox path="operatingSystem" value="Linux"/>
+    Mac <form:checkbox path="operatingSystem" value="Mac"/>
+    Windows <form:checkbox path="operatingSystem" value="Windows"/>
+
 </form:form>
 
 </body>
