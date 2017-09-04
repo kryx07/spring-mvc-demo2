@@ -43,6 +43,15 @@
 
     <input type="submit" value="Submit">
 
+    <br><br>
+
+    Favourite Language:
+    <br>
+    Java <form:radiobutton path="favouriteLanguage" value="Java"/>
+    Ruby <form:radiobutton path="favouriteLanguage" value="Ruby"/>
+    C# <form:radiobutton path="favouriteLanguage" value="C#"/>
+    C++ <form:radiobutton path="favouriteLanguage" value="C++"/>
+
 </form:form>
 
 </body>
