@@ -1,3 +1,4 @@
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,20 +6,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Student confirmation</title>
 </head>
 <body>
 
-<form action="/processFormVersionThree" method="get">
+The student is confirmed: ${student.firstName} ${student.lastName}
 
-    <input type="text" name="studentName"
-           placeholder="What's your name?"/>
-    <input type="submit"/>
-
-</form>
-
+<br><br>
+Country: ${student.country}
 
 </body>
 </html>
->
-
