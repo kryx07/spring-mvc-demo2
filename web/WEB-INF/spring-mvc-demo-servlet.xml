@@ -25,9 +25,9 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--<bean id="myBeansValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />-->
+    <bean id="myBeansValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 
-    <mvc:annotation-driven />
+    <mvc:annotation-driven validator="myBeansValidator" />
 
 
     <util:properties id="countryOptions" location="WEB-INF/countries.properties"/>

@@ -21,7 +21,8 @@
         <spring.version>4.3.1.RELEASE</spring.version>
         <jstl.version>1.2</jstl.version>
         <commons-logging.version>1.2</commons-logging.version>
-        <hibernate.version>6.0.2.Final</hibernate.version>
+        <hibernate.version>5.4.1.Final</hibernate.version>
+        <javax.validation.version>2.0.0.Final</javax.validation.version>
     </properties>
 
     <groupId>groupId</groupId>
@@ -131,13 +132,13 @@
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
+     <!--   &lt;!&ndash; https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl &ndash;&gt;
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
         </dependency>
-
+-->
         <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
@@ -159,13 +160,61 @@
             <version>${hibernate.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+      <!--  <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.version}/version>
+        </dependency>
+-->
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator-cdi -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator-cdi</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator-annotation-processor -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator-annotation-processor</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+      <!--  &lt;!&ndash; https://mvnrepository.com/artifact/javax.el/javax.el-api &ndash;&gt;
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>2.2.5</version>
+        </dependency>
+
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.glassfish.web/javax.el &ndash;&gt;
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>2.2.5</version>
+        </dependency>
+-->
+
+
+
+        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+        <!--
+                <dependency>
+                    <groupId>javax.validation</groupId>
+                    <artifactId>validation-api</artifactId>
+                    <version>1.1.0.Final</version>
+                </dependency>
+        -->
 
         <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
-            <version>1.1.0.Final</version>
+            <version>${javax.validation.version}</version>
         </dependency>
+
 
 
     </dependencies>

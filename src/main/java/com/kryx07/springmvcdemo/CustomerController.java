@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 
-
 @Controller
 @RequestMapping("customer")
 public class CustomerController {
@@ -22,6 +21,13 @@ public class CustomerController {
 
     @RequestMapping("processForm")
     public String processForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult bindingResult) {
+      /*  Validator validator;
+        ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
+        validator = validatorFactory.getValidator();
+        Set<ConstraintViolation<Customer>> constraintViolations = validator.validate(customer);
+
+        System.out.println(constraintViolations.iterator().next().getMessage());
+*/
         if (bindingResult.hasErrors()) {
             System.out.println("There are errors!");
             return "customer-form";
