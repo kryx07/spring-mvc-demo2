@@ -30,7 +30,10 @@ public class CustomerController {
         Set<ConstraintViolation<Customer>> constraintViolations = validator.validate(customer);
 
         System.out.println(constraintViolations.iterator().next().getMessage());
+
 */
+
+        System.out.println(bindingResult);
         System.out.println("Last name: " + customer.getLastName());
 
         if (bindingResult.hasErrors()) {
