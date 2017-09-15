@@ -1,9 +1,12 @@
 package com.kryx07.springmvcdemo;
 
 import com.kryx07.springmvcdemo.model.Customer;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -28,6 +31,8 @@ public class CustomerController {
 
         System.out.println(constraintViolations.iterator().next().getMessage());
 */
+        System.out.println("Last name: " + customer.getLastName());
+
         if (bindingResult.hasErrors()) {
             System.out.println("There are errors!");
             return "customer-form";
@@ -35,6 +40,12 @@ public class CustomerController {
             System.out.println("There are NOOOO errors!");
             return "customer-confirmation";
         }
+    }
+
+    @InitBinder
+    public void initBinder(WebDataBinder webDataBinder){
+        StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+        webDataBinder.registerCustomEditor(String.class, stringTrimmerEditor);;
     }
 
 }

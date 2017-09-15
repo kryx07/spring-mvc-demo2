@@ -131,6 +131,11 @@
             <version>${commons-logging.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
 
      <!--   &lt;!&ndash; https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl &ndash;&gt;
         <dependency>
@@ -139,18 +144,32 @@
             <version>${jstl.version}</version>
         </dependency>
 -->
-        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
+       <!-- &lt;!&ndash; https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl &ndash;&gt;
+        <dependency>
+            <groupId>javax.servlet.jsp.le</groupId>
+            <artifactId>jstl-api</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl-api -->
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl-api</artifactId>
             <version>${jstl.version}</version>
         </dependency>
 
+
         <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
